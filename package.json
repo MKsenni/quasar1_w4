@@ -12,9 +12,11 @@
     "build": "quasar build"
   },
   "dependencies": {
-    "axios": "^1.2.1",
+    "@module-federation/webpack-4": "^1.0.0",
     "@quasar/extras": "^1.16.4",
+    "axios": "^1.2.1",
     "core-js": "^3.6.5",
+    "mf-webpack4": "^1.4.5",
     "quasar": "^1.0.0"
   },
   "devDependencies": {
