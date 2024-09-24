@@ -105,7 +105,7 @@ module.exports = configure(function (/* ctx */) {
             filename: "remoteEntry.js",
             remoteType: "var",
             remotes: {
-              testComponents: "app_q_5@http://localhost:8080/remoteEntry.js",
+              // testComponents: "app_q_5@http://localhost:8080/remoteEntry.js",
               msComponents: "mscomponents@http://localhost:8001/remoteEntry.js",
             },
           })
