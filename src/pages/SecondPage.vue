@@ -1,10 +1,5 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import registerActionButton from "msComponents/registerActionButton";
-import registerDateRangePicker from "msComponents/registerDateRangePicker";
-
-registerActionButton("action-button");
-registerDateRangePicker("date-range-picker");
 export default defineComponent({
   name: "SecondPage",
 });

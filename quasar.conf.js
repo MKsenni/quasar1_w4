@@ -85,17 +85,6 @@ module.exports = configure(function (/* ctx */) {
       chainWebpack(chain) {
         chain.optimization.splitChunks(false).clear();
         chain.optimization.delete("splitChunks");
-        // chain.plugin("moduleFederation").use(MF, [
-        //   {
-        //     name: "mscomponents",
-        //     filename: "remoteEntry.js",
-        //     // shared: ["vue"],
-        //     exposes: {
-        //       "./TestButton.vue": "./src/components/TestButton/TestButton.vue",
-        //       "./vue2": "./node_modules/vue/dist/vue",
-        //     },
-        //   },
-        // ]);
       },
       extendWebpack(cfg) {
         cfg.entry = path.resolve(__dirname, "./.quasar/main.js");
@@ -106,11 +95,12 @@ module.exports = configure(function (/* ctx */) {
             remoteType: "var",
             remotes: {
               // testComponents: "app_q_5@http://localhost:8080/remoteEntry.js",
-              msComponents: "mscomponents@http://localhost:8001/remoteEntry.js",
+              msComponents: "msComponents@http://localhost:8001/remoteEntry.js",
             },
           })
         );
       },
+      plugins: ["registerAllMsComponents"],
     },
 
     // Full list of options: https://v1.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
